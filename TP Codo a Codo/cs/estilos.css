@@ -120,7 +120,7 @@ body{
 } 
 
 .contenedor .contenidoCovid{ 
-    background-image: url(../img/clinica.png); 
+    background-image: url(../img/covid.png); 
     width: auto;
     height: 390px;   
     grid-area: contenido; 
