@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: white;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo{
+    text-decoration: none;
+    color: black
+}
+
+.navegacion{
+    list-style: none;
+    background:#e2e2e2;
+    text-align: right;
+}
+
+.navegacion ul{
+    list-style: none;
+}
+
+.menu > li{    
+    position: relative;
+    display: inline-block;
+    padding: 10px auto;
+}
+
+.menu li a:hover{
+    color: #ce7d35;
+    transition: all .3s;
+}
+
+.menu > li > a{
+    display: block;
+    padding: 15px 30px;
+    color: #353535;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    text-align: right;
+}
+
+.submenu{
+    position: absolute;
+    background: #e2e2e2;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5;
+}
+
+.submenu li a{
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1300px; 
+    margin: 20px auto; 
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "encabezado encabezado encabezado"
+                         "contenido contenido contenido"
+                         "estudio1 estudio2 estudio3"
+                         "estudio4 estudio5 estudio6"
+                         "pie pie pie";
+}
+
+.contenedor > div,
+.contenedor .pie {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .encabezado{  
+    display: grid;
+    align-items: center;
+    text-align: right;
+    background:#e2e2e2;
+    grid-template-columns: 2.5fr 1.5fr;
+    grid-template-rows: repeat(1, auto);
+    grid-area: encabezado; 
+}
+
+.contenedor .contenido{ 
+    background-image: url(../img/clinica.png); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 650px;   
+    grid-area: contenido; 
+}
+
+.contenedor > p,
+.contenedor .contenido{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 15%;
+    align-items: center;
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: x-large;
+} 
+
+.contenedor .contenidoCovid{ 
+    background-image: url(../img/clinica.png); 
+    width: auto;
+    height: 390px;   
+    grid-area: contenido; 
+}
+
+.contenedor .contenidoLogin{ 
+    background-image: url(../img/clinica.png); 
+    width: auto;
+    height: 650px;   
+    grid-area: contenido; 
+}
+
+.contenedor > div,
+.contenedor .contenidoLogin{
+    display: flex;
+    width: auto;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+} 
+
+.contenedor .estudio1,
+.contenedor .estudio2,
+.contenedor .estudio3,
+.contenedor .estudio4,
+.contenedor .estudio5,
+.contenedor .estudio6{
+    text-align: center;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;    
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.contenedor .estudio1{
+    grid-area: estudio1;
+}
+
+.contenedor .estudio2{
+    grid-area: estudio2;
+}
+
+.contenedor .estudio3{
+    grid-area: estudio3;
+}
+
+.contenedor .estudio4{
+    grid-area: estudio4;
+}
+
+.contenedor .estudio5{
+    grid-area: estudio5;
+}
+
+.contenedor .estudio6{
+    grid-area: estudio6;
+}
+
+.contenedor .pie{
+    background:#e2e2e2;
+    color: black;
+    text-align: center;
+    align-items: center;
+    grid-area: pie; 
+}
+
+.contenedorLogin{
+    background-image: url(img/clinica.png); 
+    width: 90%;
+    max-width: 1300px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;    
+    justify-content: center;
+    height: 650px;  
+    margin: 20px auto; 
+}
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "estudio1 estudio1 estudio1"
+                             "estudio2 estudio2 estudio2"
+                             "estudio3 estudio3 estudio3"
+                             "estudio4 estudio4 estudio4"
+                             "estudio5 estudio5 estudio5"
+                             "estudio6 estudio6 estudio6"
+                             "pie pie pie";
+    }
+}
+
+@media screen and (max-width: 450px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "estudio1 estudio1 estudio1"
+                             "estudio2 estudio2 estudio2"
+                             "estudio3 estudio3 estudio3"
+                             "estudio4 estudio4 estudio4"
+                             "estudio5 estudio5 estudio5"
+                             "estudio6 estudio6 estudio6"
+                             "pie pie pie";
+    }
+}

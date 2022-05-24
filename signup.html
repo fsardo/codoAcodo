@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            <div>
+                <a class="titulo" href="index.html"><h2>Codo a Codo medical group</h2></a>
+            </div>
+            <div>
+                <nav class="navegacion">        
+                    <ul class="menu">
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="#">Account</a>  
+                            <ul class="submenu">
+                                <li><a href="login.html">Log in</a></li>
+                                <li><a href="signup.html">Sign up</a></li>
+                            </ul>             
+                        </li>       
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+    <main class="contenidoLogin"> 
+        <form action="show_data.html" target="_blank">
+            <div class="login">
+                <label width= '15px' for="nombre"></label><input size="30" type="text" name="nombre"
+                    placeholder="Ingrese su nombre ...."> <br><br>
+                <label for="apellido"></label><input size="30" type="text" name="apellido"
+                    placeholder="Ingrese su apellido ..."> <br><br>
+                <label for="direccion"></label><input size="30" type="text" name="direccion"
+                    placeholder="Ingrese su dirección ..."> <br><br>                
+                <label for="ciudad"> </label><input size="30" type="text" name="ciudad" 
+                    placeholder="Ingrese ciudad ...." > <br><br>
+                <label for="codigoPostal"></label><input size="30" type="text" name="codigoPostal"
+                    placeholder="Ingrese su codigo postal ..."> <br> <br>
+                <label for="telefono"></label><input size="30" type="tel" name="telefono"
+                    placeholder="Ingrese su telefono ...."> <br><br>
+                <label for="FechaCumpleanios"></label> <input type="date" name="FechaCumpleanios"> <br><br>
+                <label for="obraSocial"></label><input size="30" type="obraSocial" name="obraSocial"
+                    placeholder="Ingrese su obra social ...."> <br><br>
+                <label for="clave"></label><input size="30" type="password" name="clave"
+                    placeholder="Ingrese su nueva clave ...."> <br><br>
+                <label for="mail"></label><input size="30" type="email" name="mail"
+                    placeholder="Ingrese su mail ...."> <br><br>                
+
+                <p align="center">
+                    <input type="radio" name="gender" value="hombre" checked>Hombre
+                    <input type="radio" name="gender" value="Mujer">Mujer
+                    <input type="radio" name="gender" value="Otro"> Otro
+                </p><br>
+
+                <div align="center">
+                    <input type="submit" value="Enviar">                
+                    <button type="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+
+</body>
+</html>

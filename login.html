@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            <div>
+                <div>
+                    <a class="titulo" href="index.html"><h2>Codo a Codo medical group</h2></a>
+                </div>
+            </div>
+            <div>
+                <nav class="navegacion">        
+                    <ul class="menu">
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="#">Account</a>  
+                            <ul class="submenu">
+                                <li><a href="login.html">Log in</a></li>
+                                <li><a href="signup.html">Sign up</a></li>
+                            </ul>             
+                        </li>       
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="contenidoLogin"> 
+            <form action="show_data.html" name="formulario">
+                <div class="login">
+                    <div>
+                        <label for="dni"></label><input style="height: 30px" size="20" type="text" name="dni"
+                            placeholder="DNI"> <br><br>
+                    </div>
+                    <div>
+                        <label for="password"></label><input style="height: 30px" size="20" type="text" name="password"
+                            placeholder="Password"> <br><br>
+                    </div>
+                    <div align="center">
+                        <input type="submit" value="Enviar">                
+                        <button type="reset">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script>
+        (function(){
+            var formulario = document.getElementsByName('formulario')[0],
+                //elementos = formulario.elements,
+                boton = document.getElementById('btn');
+
+            var validarDni = function(e){
+                if (formulario.dni.value == 0){
+                    alert("Completa el campo dni");
+                    e.preventDefault();
+                }
+            };
+            
+            var validarPassword = function(e){
+                if (formulario.password.value == 0){
+                    alert("Completa el campo password");
+                    e.preventDefault();
+                }
+            };
+
+            var validar = function(e){
+                validarDni(e);
+                validarPassword(e);
+            };
+            formulario.addEventListener("submit", validar);
+        }())
+    </script>
+</body>  
+</html>
