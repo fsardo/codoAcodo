@@ -107,6 +107,7 @@ body{
 
 .contenedor > p,
 .contenedor .contenido{
+    font-family: 'Indie Flower', cursive;
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -151,6 +152,7 @@ body{
 .contenedor .estudio4,
 .contenedor .estudio5,
 .contenedor .estudio6{
+    font-family: 'Patrick Hand', cursive;
     text-align: center;
     height: auto;
     display: flex;
